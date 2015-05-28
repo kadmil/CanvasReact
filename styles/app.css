@@ -13,15 +13,11 @@ body {
 
 .container {
     min-height: 100vh;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
 }
 
+.container,
 .canvas-app {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    @mixin big-flex-column;
 }
 
 .header,
@@ -33,8 +29,7 @@ body {
 }
 
 .row {
-    display: flex;
-    flex:1;
+    @mixin big-flex;
     @media all and (orientation: portrait), all and (max-width: 480px) {
         flex-direction: column-reverse;
     }
@@ -47,17 +42,14 @@ body {
 }
 
 .column {
-    display: flex;
-    flex-direction: column;
-    flex:1;
+    @mixin big-flex-column;
 }
-.card{
-    flex:1;
+
+.card {
+    @mixin big-flex-column;
     border-collapse: collapse;
     border: 1px solid $blue;
     color: $blue;
-    display: flex;
-    flex-direction: column;
 }
 
 textarea {
