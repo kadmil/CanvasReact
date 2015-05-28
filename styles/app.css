@@ -35,6 +35,9 @@ body {
 .row {
     display: flex;
     flex:1;
+    @media all and (orientation: portrait), all and (max-width: 480px) {
+        flex-direction: column-reverse;
+    }
     &:first-child {
         flex: 3;
     }
@@ -50,6 +53,22 @@ body {
 }
 .card{
     flex:1;
+    border-collapse: collapse;
     border: 1px solid $blue;
     color: $blue;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    resize: none;
+    overflow: hidden;
+    flex: 1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: black;
+    border: none;
+    &:focus {
+        outline: none;
+    }
 }
