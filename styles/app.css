@@ -1,11 +1,12 @@
+@import "/mixins.css";
+@import "/variables.css";
+
 *,
 *:before,
 *:after {
     box-sizing: border-box;
 }
 
-@import "/mixins.css";
-@import "/variables.css";
 body {
     margin: 0;
     font-size: 18px;

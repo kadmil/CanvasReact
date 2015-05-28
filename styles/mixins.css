@@ -10,6 +10,6 @@
 }
 
 @define-mixin big-flex-column {
-    @mixin big-flex
+    @mixin big-flex;
     flex-direction: column;
 }
